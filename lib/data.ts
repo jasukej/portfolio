@@ -6,7 +6,7 @@ import { MdOutlineComputer, MdDesignServices } from "react-icons/md";
 import { TfiStatsUp } from "react-icons/tfi";
 import { ImStatsDots } from "react-icons/im";
 import { BiStats } from "react-icons/bi";
-import injurney from "@/public/Injurney.png";
+import injurney from "@/public/injurney.png";
 import readbuddy from "@/public/ReadBuddy.png";
 import boltbootcamp from "@/public/boltbootcamp.png";
 
