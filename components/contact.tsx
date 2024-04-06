@@ -12,10 +12,14 @@ import {
   Textarea,
   useToast,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useState, ChangeEvent, FocusEvent } from "react";
 import SectionHeading from "./section-heading";
 import { useSectionInView } from "@/lib/hooks";
 import { sendContactForm } from "@/lib/api";
+
+type TouchedState = {
+  [key: string]: boolean;
+};
 
 export default function Contact() {
   const initValues = {
@@ -33,14 +37,14 @@ export default function Contact() {
   const { ref } = useSectionInView("Contact");
   const toast = useToast();
   const [state, setState] = useState(initState);
-  const [touched, setTouched] = useState({});
+  const [touched, setTouched] = useState<TouchedState>({});
 
   const { values, isLoading, error } = state;
 
-  const onBlur = ({ target }) =>
+  const onBlur = ({ target }: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setTouched((prev) => ({ ...prev, [target.name]: true }));
 
-  const handleChange = ({ target }) =>
+  const handleChange = ({ target }: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setState((prev) => ({
       ...prev,
       values: {
@@ -95,7 +99,6 @@ export default function Contact() {
             <FormControl isRequired isInvalid={touched.name && !values.message}>
               <FormLabel>Message</FormLabel>
               <Textarea
-                type="text"
                 name="message"
                 rows={4}
                 placeholder="Hey, nice to meet you!"
