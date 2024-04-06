@@ -8,7 +8,10 @@ import { skillsData } from "@/lib/data";
 export default function Skills() {
   const { ref } = useSectionInView("Skills", 0.5);
   return (
-    <section id="skills" className="scroll-mt-28 px-4">
+    <section 
+      id="skills" 
+      ref={ref}
+      className="scroll-mt-28 px-4">
       <SectionHeading>Skills</SectionHeading>
       <div className="flex justify-center my-4 mx-2 lg:mx-16">
         <div className="gap-y-8 justify-between gap-x-8 text-slate-700 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 ">

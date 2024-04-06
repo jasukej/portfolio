@@ -40,7 +40,8 @@ export default function Header() {
   return (
     <header className="z-[999] absolute">
       <div className="wrap justify-between items-center w-full h-[4.5rem] sm:h-[3.25rem]">
-        <div className="fixed top-6 left-0 h-[4.5rem] sm:h-[3.25rem] flex items-center px-4 sm:px-6 z-10">
+        <div className="fixed sm:top-6 top-1.5 left-0 h-[4.5rem] sm:h-[3.25rem] flex items-center px-4 sm:px-6 z-10
+        md:translate-y-4.5 transition-all duration-300">
           <a href="#home">
             <Image
               src="/logo-black.png"
@@ -52,19 +53,26 @@ export default function Header() {
           </a>
         </div>
 
-        <div className="fixed right-0 top-7 px-4 sm:px-6 sm:hidden">
-          <button onClick={() => setIsNavOpen(!isNavOpen)}>
-            {isNavOpen ? (
-              <MdClose className="h-6 w-6" />
-            ) : (
-              <FiMenu className="h-6 w-6" />
-            )}
-          </button>
-        </div>
+        {/* Hamburger */}
+        <button
+          className="z-10 fixed right-0 top-7 px-4 sm:px-6 sm:hidden"
+          onClick={() => {
+            console.log("Before clicking:", isNavOpen);
+            setIsNavOpen(!isNavOpen);
+            console.log("After clicking:", !isNavOpen);
+          }}
+        >
+          {isNavOpen ? (
+            <MdClose className="h-6 w-6" />
+          ) : (
+            <FiMenu className="h-6 w-6" />
+          )}
+        </button>
 
+        {/* Collapsible Menu */}
         {isNavOpen && (
-          <nav className="flex fixed top-[4.5rem] left-0 w-full bg-white sm:hidden">
-            <ul className="flex flex-col items-center w-full">
+          <nav className="flex fixed top-[4.5rem] left-0 w-full bg-white sm:hidden shadow-md">
+            <ul className="flex flex-col items-center w-full pb-2">
               {links.map((link) => (
                 <li key={link.hash} className="w-full text-center">
                   <Link
@@ -79,18 +87,19 @@ export default function Header() {
           </nav>
         )}
 
+        {/* Main Navigation */}
         <div>
           <motion.div
             className={`fixed top-0 left-1/2 transform -translate-x-1/2 h-[4.5rem] w-full sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full transition-all duration-300 ${
               showBackground
-                ? "rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
+                ? "rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 sm:bg-opacity-100 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
                 : "bg-transparent"
             }`}
             initial={{ y: -100, x: "-50%", opacity: 0 }}
             animate={{ y: 0, x: "-50%", opacity: 1 }}
           ></motion.div>
 
-          <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.3rem] sm:h-[initial] py:0 sm:flex items-center">
+          <nav className="hidden md:flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.3rem] sm:h-[initial] py:0 sm:flex items-center">
             <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:gap-5 sm:flex-nowrap">
               {links.map((link) => (
                 <motion.li
