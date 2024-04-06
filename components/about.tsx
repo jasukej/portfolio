@@ -17,9 +17,9 @@ export default function About() {
   const [heyAnimated, setHeyAnimated] = useState(false);
 
   return (
-    <section ref={ref} className="scroll-mt-28" id="about">
+    <section ref={ref} className="scroll-mt-32" id="about">
       <SectionHeading>A Bit About Myself</SectionHeading>
-      <div className="mx-4 flex justify-center gap-x-8">
+      <div className="mx-4 mt-4 mb-20 flex justify-center gap-x-8">
         <div className="flex flex-col md:flex-row lg:flex-row gap-y-8">
           <div className="flex flex-col min-w-[15rem] min-h-[15rem]">
             {activeSection === "About" && (
@@ -65,7 +65,7 @@ export default function About() {
               <h3 className="bg-gradient-to-r from-cyan-500 via-indigo-500 to-blue-500 bold text-xl lg:text-2xl bg-clip-text inline-block text-transparent h-[40px] font-bold">
                 My interests span ...
               </h3>
-              <li>ML Research</li>
+              <li>Machine Learning</li>
               <li>Business Analytics</li>
               <li>UI/UX Design</li>
               <li>Events Planning</li>

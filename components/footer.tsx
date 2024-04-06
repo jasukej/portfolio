@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <section id="footer">
       <div className="font-light text-sm flex w-full justify-center mb-4">
-        Made with ☕ and 🇮🇩🍜
+        Thanks for visiting! | Terima kasih sudah berkunjung!
       </div>
     </section>
   );
