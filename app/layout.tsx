@@ -23,7 +23,7 @@ export default function RootLayout({
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
-        <link rel="icon" href="/logo-black.png" /> 
+        <link rel="icon" href="/favicon.ico" /> 
       </Head>
       <body
         className={"${inter.className} bg-gray-50 text-gray-950 pt-24 sm:36"}
