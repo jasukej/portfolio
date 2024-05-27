@@ -3,6 +3,7 @@ import Header from "@/components/header";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import { Inter } from "next/font/google";
 import { Outfit } from "next/font/google";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 const outfit = Outfit({ subsets: ["latin"] });
@@ -19,6 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth">
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <link rel="icon" href="/logo-black.png" /> 
+      </Head>
       <body
         className={"${inter.className} bg-gray-50 text-gray-950 pt-24 sm:36"}
       >

@@ -51,9 +51,9 @@ export default function About() {
                 Currently a...
               </h3>
               <li>Bachelor of Science Student @ UBC</li>
-              <li>B2C Member @ AIESEC in UBC</li>
+              <li>Engagement Coordinator @ nwPlus</li>
               <li>Tutor @ The C.O.D.E Intiative</li>
-              <li>Incoming Cohort @ SEEDS 2024</li>
+              <li>UI/UX Designer @ Develop for Good 2024</li>
             </motion.div>
 
             <motion.div
@@ -81,8 +81,8 @@ export default function About() {
                 I like ...
               </h3>
               <li>🏸 smacking birdies</li>
-              <li>🚶‍♂️ walking insane distances</li>
-              <li>🥘 cooking up delicious meals</li>
+              <li>🚶 walking insane distances</li>
+              <li>🥘 cooking up comforting meals</li>
             </motion.div>
           </div>
         </div>
