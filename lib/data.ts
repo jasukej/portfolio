@@ -3,9 +3,11 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import { MdOutlineComputer, MdDesignServices } from "react-icons/md";
+import { BsEnvelopeHeart } from "react-icons/bs";
 import { TfiStatsUp } from "react-icons/tfi";
 import { ImStatsDots } from "react-icons/im";
 import { BiStats } from "react-icons/bi";
+import { AiFillSmile } from "react-icons/ai";
 import injurney from "@/public/injurney.png";
 import readbuddy from "@/public/ReadBuddy.png";
 import boltbootcamp from "@/public/boltbootcamp.png";
@@ -126,11 +128,31 @@ export const experiencesData = [
   {
     title: "B2C (Marketing) Portfolio Member",
     org: "AIESEC in UBC",
-    tag: "volunteer",
+    tag: "clubs",
     location: "Vancouver, BC",
     description: 
     "Conducted class shouts and boothings to promote AIESEC’s exchange opportunities. Designed compelling newsletters and promotional materials, ensuring consistent branding across digital platforms.",
     icon: React.createElement(ImStatsDots),
     date: "Jan 2024 - Present",
+  }, 
+  {
+    title: "Engagement Coordinator",
+    org: "nwPlus",
+    tag: "clubs",
+    location: "Vancouver, BC",
+    description: 
+    "Planning events and engagement strategies for Western Canada's largest hackathons.",
+    icon: React.createElement(AiFillSmile),
+    date: "May 2024 - Present",
+  }, 
+  {
+    title: "Designer",
+    org: "Swim England @ Develop For Good",
+    tag: "volunteer",
+    location: "Remote",
+    description: 
+    "Optimizing 30+ internal user flows for the Swim England team through wireframing, designing, and creating functional prototypes.",
+    icon: React.createElement(BsEnvelopeHeart),
+    date: "May 2024 - Present",
   }, 
 ] as const;
