@@ -70,8 +70,8 @@ export default function Intro() {
               <span className="bold  bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text inline-block text-transparent">
                 data analytics.
               </span>{" "}
-              I&apos;m always experimenting, whether it&apos;s refining an
-              innovative technical project or cooking up delicious meals.
+              I&apos;m always experimenting, whether it&apos;s refining my
+              projects or cooking up delicious meals.
             </motion.p>
             <div className="gap-y-8 mb-12">
               <div className="flex max-w-max gap-x-6 items-center lg:mx-0 mx-auto">
@@ -107,7 +107,7 @@ export default function Intro() {
         {/*image*/}
         <div className="lg:flex lg:flex-1 max-w-[320px] lg:max-w-[420px] overflow-hidden animate-profile-animate">
           <Image
-            src="/kezrijadi.png"
+            src="/kezrijadi.jpg"
             alt="Kez Rijadi"
             className="w-full h-full object-cover"
             width={320}
