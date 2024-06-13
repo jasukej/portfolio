@@ -6,11 +6,9 @@ import { MdOutlineComputer, MdDesignServices } from "react-icons/md";
 import { BsEnvelopeHeart } from "react-icons/bs";
 import { TfiStatsUp } from "react-icons/tfi";
 import { ImStatsDots } from "react-icons/im";
+import { LuTriangle } from "react-icons/lu";
 import { BiStats } from "react-icons/bi";
 import { AiFillSmile } from "react-icons/ai";
-import injurney from "@/public/injurney.png";
-import readbuddy from "@/public/ReadBuddy.png";
-import boltbootcamp from "@/public/boltbootcamp.png";
 
 export const links = [
   {
@@ -26,82 +24,9 @@ export const links = [
     hash: "#projects",
   },
   {
-    name: "Skills",
-    hash: "#skills",
-  },
-  {
     name: "Experience",
     hash: "#experience",
   },
-  {
-    name: "Contact",
-    hash: "#contact",
-  },
-] as const;
-
-export const projectsData = [
-  {
-    title: "ReadBuddy",
-    description:
-      "A browser extension to customize text and display features specially designed for dyslexic and visually impaired users.",
-    tags: ["HTML", "Tailwind", "Javascript", "Google Cloud Platform"],
-    imageUrl: readbuddy,
-  },
-  {
-    title: "Injurney",
-    description:
-      "A web application for users with injuries to generate and integrate personalized AI care plans into their lifestyle.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "MongoDB", "OpenAI"],
-    imageUrl: injurney,
-  },
-  {
-    title: "2024 BOLT Bootcamp",
-    description:
-      "Utilising data-driven insights and predictive ML models to create a cohesive, business-oriented solution to credit card fraud.",
-    tags: ["Python", "Machine Learning", "CNN", "Tensorflow", "Data Analytics", "Marketing"],
-    imageUrl: boltbootcamp,
-  },
-] as const;
-
-export const skillsData = [
-  {
-    category: "Front-End",
-    icon: "🖥 ",
-    skills:["HTML",
-    "Tailwind",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js"]
-  },
-  {
-    category: "Back-End",
-    icon: "🚪",
-    skills:["Node.js + Express",
-    "Google Cloud Platform",
-    "Python",
-    "MongoDB",
-    "Java"]
-  },
-  {
-    category: "ML & Analytics",
-    icon: "📊",
-    skills:["Python",
-    "R",
-    "Tableau",
-    "Tensorflow",
-    "Google Analytics"]
-  },
-  {
-    category: "Others",
-    icon: "🥞",
-    skills:["Communication",
-    "Marketing",
-    "Presentation",
-    "Figma",
-    "Adobe Illustrator"]
-  },
-
 ] as const;
 
 export const experiencesData = [
@@ -112,7 +37,7 @@ export const experiencesData = [
     location: "Jakarta, Indonesia",
     description: 
     "Developed a dynamic website using Editor X, JavaScript and jQuery, enhancing user interaction and creating a responsive layout. Led a team of 12 volunteers that executed design, coding, and content updates.",
-    icon: React.createElement(MdOutlineComputer),
+    icon: MdOutlineComputer,
     date: "Oct 2021 - Jan 2023",
   }, 
   {
@@ -122,7 +47,7 @@ export const experiencesData = [
     location: "Jakarta, Indonesia",
     description: 
     "Led the design of an educational platform with a focus on UX/UI principles, enhancing user experience and content accessibility in social media posts and promotional materials.",
-    icon: React.createElement(MdDesignServices),
+    icon: MdDesignServices,
     date: "Oct 2021 - July 2022",
   }, 
   {
@@ -132,7 +57,7 @@ export const experiencesData = [
     location: "Vancouver, BC",
     description: 
     "Conducted class shouts and boothings to promote AIESEC’s exchange opportunities. Designed compelling newsletters and promotional materials, ensuring consistent branding across digital platforms.",
-    icon: React.createElement(ImStatsDots),
+    icon: ImStatsDots,
     date: "Jan 2024 - Present",
   }, 
   {
@@ -141,18 +66,28 @@ export const experiencesData = [
     tag: "clubs",
     location: "Vancouver, BC",
     description: 
-    "Planning events and engagement strategies for Western Canada's largest hackathons.",
-    icon: React.createElement(AiFillSmile),
+    "Planning day-of hacker activities and engagement strategies for Western Canada's largest hackathons.",
+    icon: AiFillSmile,
     date: "May 2024 - Present",
   }, 
   {
     title: "Designer",
-    org: "Swim England @ Develop For Good",
+    org: "Develop For Good",
     tag: "volunteer",
     location: "Remote",
     description: 
     "Optimizing 30+ internal user flows for the Swim England team through wireframing, designing, and creating functional prototypes.",
-    icon: React.createElement(BsEnvelopeHeart),
+    icon: BsEnvelopeHeart,
+    date: "May 2024 - Present",
+  }, 
+  {
+    title: "Events Director",
+    org: "UBC Product Management Club",
+    tag: "club",
+    location: "Vancouver, BC",
+    description: 
+    "Co-directing UBC's first PM conference to be held later this January.",
+    icon: LuTriangle,
     date: "May 2024 - Present",
   }, 
 ] as const;

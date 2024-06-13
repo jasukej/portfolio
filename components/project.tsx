@@ -1,68 +1,140 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
-import { projectsData } from "@/lib/data";
+import { projectsData } from "@/lib/projectsData";
 import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
+import { FaExternalLinkSquareAlt, FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
+import Badge from "./Badge";
 
 type ProjectProps = (typeof projectsData)[number];
 
-export default function Project({
+export default function ProjectCard({
   title,
   description,
   tags,
   imageUrl,
 }: ProjectProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1.33 1"],
-  });
-
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.85, 1]);
-
+  const router = useRouter();
+  const [isHovered, setIsHovered] = useState(false);
+ 
   return (
     <motion.div
-      ref={ref}
-      style={{
-        scale: scrollYProgress,
-        opacity: scrollYProgress,
-      }}
-      className="group mb-3 sm:mb-8 last:mb-0"
-    >
-      <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] mb-3 sm:mb-8 last:mb-0 group-even:even:pl-8 hover:bg-gray-200 transition">
-        <div className="py-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[22rem]">
-          <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed text-gray-700">{description}</p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
-            {tags.map((tag, index) => (
-              <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full"
-                key={index}
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
-          <Image
+      onClick={() => {router.push(`projects/${title}`)}}
+      className="
+        group
+        border-[2px]
+        border-grey-800 
+        mb-3
+        min-h-[5rem]
+        max-w-[25rem]
+        rounded-lg 
+        sm:mb-8 
+        last:mb-0"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      >
+      <div
+        className="
+        flex
+        flex-col
+        p-4
+        border-gray-800
+        ">
+        <div 
+        className="
+          max-h-[18rem]
+          overflow-hidden
+          mb-2
+          border-black
+          border-[1px]
+          rounded-lg
+          relative
+        ">
+          <Image 
             src={imageUrl}
-            alt={title}
-            quality={95}
-            className="absolute top-8 -right-40 w-[28rem] rounded-t-lg shadow-2xl 
-          transition
-          group-hover:scale-[1.05]
-          group-even:-right-[initial] 
-          group-even:-left-40
-          group-hover:-translate-x-3
-          group-hover:translate-y-3
-          group-hover:-rotate-2
-          
-          group-even:group-hover:translate-x-3
-          group-even:group-hover:translate-y-3
-          group-even:group-hover:rotate-2"
+            alt={`${title}-alt`}
+            style={{
+              objectFit:"cover",
+              filter: isHovered ? "none" : "sepia(1) saturate(0.8) hue-rotate(190deg) opacity(1) drop-shadow(0 0 5px rgba(0, 0, 0, 0.2))",
+              //transition: "0.3s ease-in-out",
+            }}
           />
+          <div
+            className="
+              absolute
+              inset-0
+              bg-cover
+              bg-center
+              opacity-20
+              transition-opacity
+              duration-300
+              group-hover:opacity-0
+            "
+            style={{ backgroundImage: "url('/blue-overlay.jpeg')" }}
+          ></div>
         </div>
-      </section>
+        <div
+        className="">
+          <div 
+          className="
+            flex-row
+            flex
+            justify-between
+          ">
+            <div 
+            className="
+              text-xl 
+              font-semibold">
+              {title}
+            </div>
+            <div
+            className="
+              max-w-[30%]
+              flex-row
+              flex
+              gap-4
+              items-center
+              justify-center
+            "
+            >
+              <FaGithub 
+                size={24}
+              />
+              <FiExternalLink 
+                size={24}
+              />
+            </div>
+          </div>
+          <div 
+          className="
+            mt-2 
+            text-sm
+            text-neutral-900
+            ">
+            {description}
+          </div>
+          <div
+          className="
+            flex
+            flex-row
+            overflow-x-scroll
+            max-w-full
+            gap-x-3
+            mt-2
+          ">
+            {tags.map((tech:string, index:any) => {
+              return (
+                <Badge 
+                  key={index}
+                  title={tech}
+                />
+              )
+            })}
+          </div>
+        </div>
+      </div>
     </motion.div>
   );
 }

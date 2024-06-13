@@ -27,9 +27,14 @@ module.exports = {
             borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%",
           },
         },
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
       },
       animation: {
         'profile-animate': 'profile_animate 8s ease-in-out infinite',
+        'scroll': 'scroll 10s linear infinite',
       },
     },
   },
