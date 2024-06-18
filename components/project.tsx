@@ -16,14 +16,20 @@ export default function ProjectCard({
   description,
   tags,
   imageUrl,
-  github
+  github,
+  external,
+  detailed
 }: ProjectProps) {
   const router = useRouter();
   const [isHovered, setIsHovered] = useState(false);
+
+  const handleCardClick = () => {
+    detailed ? router.push(`projects/${title}`) : window.open(external, "_blank");
+  }
  
   return (
     <motion.div
-      onClick={() => {router.push(`projects/${title}`)}}
+      onClick={handleCardClick}
       className="
         group
         border-[2px]
@@ -104,14 +110,25 @@ export default function ProjectCard({
             "
             >
               <Link 
-                href={github}>
+                href={github} 
+                passHref
+                target="_blank"
+                >
                 <FaGithub 
                   size={24}
+                  onClick={(e) => e.stopPropagation()}
                 />
               </Link>
-              <FiExternalLink 
-                size={24}
-              />
+              <Link
+                href={external} 
+                passHref
+                target="_blank"
+                >
+                <FiExternalLink 
+                  size={24}
+                  onClick={(e) => e.stopPropagation()}
+                />
+              </Link>
             </div>
           </div>
           <div 

@@ -13,6 +13,7 @@ export const projectsData = [
       category: "Personal Project",
       github: 'https://github.com/jasukej/study-spotter',
       external: 'https://studyspotter.vercel.app/',
+      detailed: true,
     },
     {
       title: "BOLT Bootcamp 2024",
@@ -23,6 +24,7 @@ export const projectsData = [
       category: "Case Comp",
       github: 'https://github.com/jasukej/BoltCaseComp2024',
       external: 'https://drive.google.com/file/d/1zArPVUS5emdSvPQnCWLjNSYr6HU2ZMco/view?usp=sharing',
+      detailed: false,
     },
     {
       title: "ReadBuddy",
@@ -33,6 +35,7 @@ export const projectsData = [
       category: "Hackathon",
       github: 'https://github.com/jasukej/ReadBuddy',
       external: 'https://devpost.com/software/readbuddy',
+      detailed: false,
     },
     {
       title: "Injurney",
@@ -43,5 +46,6 @@ export const projectsData = [
       category: "Hackathon",
       github: 'https://github.com/gm4vm0/injurney/tree/deev',
       external: 'https://devpost.com/software/injurney',
+      detailed: false,
     },
   ] as const;
