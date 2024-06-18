@@ -51,7 +51,7 @@ export const experiencesData = [
       tag: "client project",
       location: "Remote",
       description: 
-      "Creating a webapp to optimize 30+ internal user flows for the Swim England team.",
+      "Creating a webapp to optimize 30+ internal user flows for the Swim England team. Implementing workflows for autopopulation and integrating existing OpenEngage database with new system.",
       icon: BsEnvelopeHeart,
       date: "May 2024 - Present",
     }, 

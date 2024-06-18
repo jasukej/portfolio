@@ -30,7 +30,8 @@ export default function Projects() {
         flex
         flex-col
         justify-center
-        max-w-[40rem]">
+        max-w-[40rem]
+        xl:w-[60rem]">
       <div className="
           flex
           md:flex-row
@@ -49,28 +50,38 @@ export default function Projects() {
             <button
               key={category}
               className={`
-                px-4 
+                px-2 
                 py-2
-                mx-2 
-                rounded-md
+                mx-2
                 md:max-h-[2rem]
                 h-auto
                 text-xs 
-              ${
-                selectedCategory === category
-                  ? "bg-gradient-to-r from-cyan-500 to-blue-500  text-white"
-                  : "bg-gray-200 text-gray-700"
-              }`}
+                transition
+                duration-100
+                relative
+                text-nowrap
+                hover:opacity-60
+                ${selectedCategory === category ? "border-b-2 border-blue-500" : "text-gray-700 border-none"}
+              `}
               onClick={() => setSelectedCategory(category)}
             >
-              {category}
+              <span className={`
+              ${
+                selectedCategory === category
+                  ? "bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text underline-offset-4 underline text-transparent"
+                  : "text-gray-700 border-none"
+              }`}>
+                {category}
+              </span>
             </button>
           ))}
         </div>
         </div>
         <div className="
           flex-col 
-          flex 
+          flex
+          xl:flex-wrap
+          xl:gap-x-4
           items-center 
           justify-center">
           {filteredProjects.map((project, index) => (

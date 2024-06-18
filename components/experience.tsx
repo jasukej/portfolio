@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import SectionHeading from "./section-heading";
 import useMeasure from "react-use-measure";
-import { experiencesData } from "@/lib/links";
+import { experiencesData } from "@/lib/experiencesData";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useSectionInView } from "@/lib/hooks";
 import { useSpring, animated } from "@react-spring/web";
