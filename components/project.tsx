@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { FaExternalLinkSquareAlt, FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import Badge from "./Badge";
+import Link from "next/link";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -15,6 +16,7 @@ export default function ProjectCard({
   description,
   tags,
   imageUrl,
+  github
 }: ProjectProps) {
   const router = useRouter();
   const [isHovered, setIsHovered] = useState(false);
@@ -51,6 +53,7 @@ export default function ProjectCard({
           border-[1px]
           rounded-lg
           relative
+          cursor-pointer
         ">
           <Image 
             src={imageUrl}
@@ -58,7 +61,8 @@ export default function ProjectCard({
             style={{
               objectFit:"cover",
               filter: isHovered ? "none" : "sepia(1) saturate(0.8) hue-rotate(190deg) opacity(1) drop-shadow(0 0 5px rgba(0, 0, 0, 0.2))",
-              //transition: "0.3s ease-in-out",
+              scale: isHovered ? '1.02' : 'none',
+              transition: "scale 0.2s ease-in-out",
             }}
           />
           <div
@@ -99,9 +103,12 @@ export default function ProjectCard({
               justify-center
             "
             >
-              <FaGithub 
-                size={24}
-              />
+              <Link 
+                href={github}>
+                <FaGithub 
+                  size={24}
+                />
+              </Link>
               <FiExternalLink 
                 size={24}
               />

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { links } from "@/lib/data";
+import { links } from "@/lib/links";
 import clsx from "clsx";
 
 import { FiMenu } from "react-icons/fi";
@@ -38,17 +38,22 @@ export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <header className="
+    <header
+      className="
       z-[999] 
-      absolute">
-      <div className="
+      absolute"
+    >
+      <div
+        className="
         wrap 
         justify-between 
         items-center 
         w-full 
         h-[4.5rem] 
-        sm:h-[3.25rem]">
-        <div className="
+        sm:h-[3.25rem]"
+      >
+        <div
+          className="
         fixed 
         sm:top-6 
         top-1.5 
@@ -62,7 +67,8 @@ export default function Header() {
         z-10
         md:translate-y-4.5 
         transition-all 
-        duration-300">
+        duration-300"
+        >
           <a href="#home">
             {/* <Image
               src="/logo-black.png"
@@ -99,7 +105,8 @@ export default function Header() {
 
         {/* Collapsible Menu */}
         {isNavOpen && (
-          <nav className="
+          <nav
+            className="
             flex 
             fixed 
             top-[4.5rem] 
@@ -107,19 +114,23 @@ export default function Header() {
             w-full 
             bg-white
             sm:hidden 
-            shadow-md">
-            <ul className="
+            shadow-md"
+          >
+            <ul
+              className="
               flex 
               flex-col 
               items-center 
               w-full 
-              pb-2">
+              pb-2"
+            >
               {links.map((link) => (
-                <li 
-                key={link.hash} 
-                className="
+                <li
+                  key={link.hash}
+                  className="
                   w-full 
-                  text-center">
+                  text-center"
+                >
                   <Link
                     className="
                       block 
@@ -154,16 +165,16 @@ export default function Header() {
               sm:rounded-full 
               transition-all 
               duration-300 ${
-              showBackground
-                ? "rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 sm:bg-opacity-100 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:bg-gray-200 dark:bg-opacity-75"
-                : "bg-transparent"
-            }`}
+                showBackground
+                  ? "rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 sm:bg-opacity-100 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:bg-gray-200 dark:bg-opacity-75"
+                  : "bg-transparent"
+              }`}
             initial={{ y: -100, x: "-50%", opacity: 0 }}
             animate={{ y: 0, x: "-50%", opacity: 1 }}
           ></motion.div>
 
-          <nav 
-          className="
+          <nav
+            className="
             hidden 
             md:flex 
             fixed
@@ -176,9 +187,10 @@ export default function Header() {
             sm:h-[initial] 
             py:0 
             sm:flex 
-            items-center">
-            <ul 
-            className="
+            items-center"
+          >
+            <ul
+              className="
               flex 
               w-auto
               flex-wrap 
@@ -190,7 +202,8 @@ export default function Header() {
               text-gray-500 
               sm:w-[initial] 
               sm:gap-5 
-              sm:flex-nowrap">
+              sm:flex-nowrap"
+            >
               {links.map((link) => (
                 <motion.li
                   className="

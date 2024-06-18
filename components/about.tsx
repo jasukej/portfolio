@@ -91,9 +91,9 @@ export default function About() {
                 Currently a...
               </h3>
               <li>Bachelor of Science Student @ UBC</li>
+              <li>Developer @ Develop for Good 2024</li>
               <li>Engagement Coordinator @ nwPlus</li>
               <li>Tutor @ The C.O.D.E Intiative</li>
-              <li>UI/UX Designer @ Develop for Good 2024</li>
             </motion.div>
 
             <motion.div
@@ -120,7 +120,7 @@ export default function About() {
               <li>Machine Learning</li>
               <li>Data Analytics</li>
               <li>UX Research</li>
-              <li>Events Planning</li>
+              <li>Planning Events</li>
             </motion.div>
 
             <motion.div

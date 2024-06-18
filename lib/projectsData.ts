@@ -10,15 +10,19 @@ export const projectsData = [
       "Community-driven website that helps students find the best study spots based on personalized preferences and real-time user reviews.",
       tags: ["Next.js", "React", "Prisma", "MongoDB", "Tailwind", "Maps API"],
       imageUrl: study_spotter,
-      category: "Personal Project"
+      category: "Personal Project",
+      github: 'https://github.com/jasukej/study-spotter',
+      external: 'https://studyspotter.vercel.app/',
     },
     {
-      title: "2024 BOLT UBC Case Competition",
+      title: "BOLT Bootcamp 2024",
       description:
         "Utilising data-driven insights and predictive ML models to create a cohesive, business-oriented solution to credit card fraud.",
       tags: ["Python", "Machine Learning", "Tensorflow", "Data Analytics", "Marketing"],
       imageUrl: boltbootcamp,
-      category: "Case Comp"
+      category: "Case Comp",
+      github: 'https://github.com/jasukej/BoltCaseComp2024',
+      external: 'https://drive.google.com/file/d/1zArPVUS5emdSvPQnCWLjNSYr6HU2ZMco/view?usp=sharing',
     },
     {
       title: "ReadBuddy",
@@ -26,7 +30,9 @@ export const projectsData = [
         "A browser extension to customize text and display features specially designed for dyslexic and visually impaired users.",
       tags: ["HTML", "Tailwind", "Javascript", "Google Cloud Platform"],
       imageUrl: readbuddy,
-      category: "Hackathon"
+      category: "Hackathon",
+      github: 'https://github.com/jasukej/ReadBuddy',
+      external: 'https://devpost.com/software/readbuddy',
     },
     {
       title: "Injurney",
@@ -34,6 +40,8 @@ export const projectsData = [
         "A web application for users with injuries to generate and integrate personalized AI care plans into their lifestyle.",
       tags: ["React", "TypeScript", "Next.js", "Tailwind", "MongoDB", "OpenAI"],
       imageUrl: injurney,
-      category: "Hackathon"
+      category: "Hackathon",
+      github: 'https://github.com/gm4vm0/injurney/tree/deev',
+      external: 'https://devpost.com/software/injurney',
     },
   ] as const;

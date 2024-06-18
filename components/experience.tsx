@@ -1,14 +1,13 @@
-'use client'
+"use client";
 
 import React, { useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import SectionHeading from "./section-heading";
 import useMeasure from "react-use-measure";
-import { experiencesData } from "@/lib/data";
+import { experiencesData } from "@/lib/links";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useSectionInView } from "@/lib/hooks";
-import { useSpring, animated } from '@react-spring/web'
-
+import { useSpring, animated } from "@react-spring/web";
 
 const CustomTimeline = () => {
   const [expanded, setExpanded] = useState<number | null>(null);
@@ -20,35 +19,31 @@ const CustomTimeline = () => {
   };
 
   return (
-    <section 
-      ref={ref}
-      id="experience" 
-      className="scroll-mt-28">
+    <section ref={ref} id="experience" className="scroll-mt-28">
       <div
-      className="
+        className="
         flex
         justify-center
       "
       >
-      <div 
-      className="
+        <div
+          className="
         relative 
         flex 
-        flex-col">
-        <SectionHeading>
-          experience
-        </SectionHeading>
-        <div 
-        className="
+        flex-col"
+        >
+          <SectionHeading>experience</SectionHeading>
+          <div
+            className="
           absolute 
           mt-14
           w-1 
           bg-gray-200 
           left-6 
           top-0 
-          h-[94%]">
-        </div>
-        {experiencesData.map((exp, index) => {
+          h-[94%]"
+          ></div>
+          {experiencesData.map((exp, index) => {
             const {
               title,
               org,
@@ -64,24 +59,25 @@ const CustomTimeline = () => {
               config: { tension: 120, friction: 20 },
               from: {
                 height: 0,
-                opacity: 0
-              }, 
+                opacity: 0,
+              },
               to: {
                 height: isExpanded ? viewHeight : 0,
-                opacity: 1
+                opacity: 1,
               },
-            })
+            });
 
-        return (
-          <div 
-            key={index} 
-            className="
+            return (
+              <div
+                key={index}
+                className="
               relative 
               flex 
               items-start 
-              mb-8">
-            <div 
-              className="
+              mb-8"
+              >
+                <div
+                  className="
                 bg-white 
                 border-2 
                 border-gray-200 
@@ -92,13 +88,11 @@ const CustomTimeline = () => {
                 top-10
                 transform 
                 -translate-y-1/2"
-            >
-              <Icon 
-                size={26}
-              />
-            </div>
-            <div
-              className="
+                >
+                  <Icon size={26} />
+                </div>
+                <div
+                  className="
                 bg-gray-100 
                 border 
                 border-gray-200 
@@ -111,10 +105,10 @@ const CustomTimeline = () => {
                 transition-shadow 
                 duration-300 
                 hover:shadow-md"
-              onClick={() => handleToggle(index)}
-            >
-              <div 
-              className="
+                  onClick={() => handleToggle(index)}
+                >
+                  <div
+                    className="
                 bg-gradient-to-r 
                 from-indigo-500 
                 to-purple-500 
@@ -125,47 +119,49 @@ const CustomTimeline = () => {
                 py-1 
                 mb-2 
                 inline-block"
-              >
-                {exp.tag}
-              </div>
-              <h3 
-              className="
+                  >
+                    {exp.tag}
+                  </div>
+                  <h3
+                    className="
                 font-bold 
                 text-lg"
-              >
-                {exp.title} 
-                <span className="font-light">&nbsp; @ {exp.org}</span>
-              </h3>
-              <div 
-              className="
+                  >
+                    {exp.title}
+                    <span className="font-light">&nbsp; @ {exp.org}</span>
+                  </h3>
+                  <div
+                    className="
               text-gray-500 
               text-sm 
-              mb-2">
-                {exp.date}
-              </div>
-              <animated.div style={{overflow: "hidden", ...expandProps}}>
-                <div ref={measureRef}>
-              {isExpanded && (
-                <>
-                  <div 
-                    className="
+              mb-2"
+                  >
+                    {exp.date}
+                  </div>
+                  <animated.div style={{ overflow: "hidden", ...expandProps }}>
+                    <div ref={measureRef}>
+                      {isExpanded && (
+                        <>
+                          <div
+                            className="
                     flex 
                     items-center 
                     text-gray-600 
-                    text-sm mb-2">
-                    <FaLocationDot className="mr-2" />
-                    {exp.location}
-                  </div>
-                  <p className="text-gray-700">{exp.description}</p>
-                </>
-              )}
+                    text-sm mb-2"
+                          >
+                            <FaLocationDot className="mr-2" />
+                            {exp.location}
+                          </div>
+                          <p className="text-gray-700">{exp.description}</p>
+                        </>
+                      )}
+                    </div>
+                  </animated.div>
+                </div>
               </div>
-              </animated.div>
-            </div>
-          </div>
-        );
-        })}
-      </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
