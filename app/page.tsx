@@ -8,7 +8,8 @@ import Footer from "@/components/footer";
 export default function Home() {
   return (
       <main className="
-        px-24 
+        px-14
+        md:px-24 
         pt-20
         pb-10
         lg:py-0

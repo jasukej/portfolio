@@ -8,11 +8,14 @@ export default function Footer() {
       <div className="
         font-light 
         text-sm 
-        flex 
+        flex
+        md:flex-row 
+        flex-col
+        gap-y-2
         w-full 
         justify-center 
         mb-4">
-          👋 Thanks for visiting! |&nbsp;
+          👋 Thanks for visiting! <span className="hidden md:block">&nbsp;|&nbsp;</span>
         <Link
           href="mailto:keziarijadi25@gmail.com"
           className="

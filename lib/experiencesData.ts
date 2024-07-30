@@ -64,5 +64,5 @@ export const experiencesData = [
       "Co-directing UBC's first PM conference to be held later this January.",
       icon: LuTriangle,
       date: "May 2024 - Present",
-    }, 
+    },
   ] as const;

@@ -19,7 +19,7 @@ export default function About() {
   return (
     <section 
       ref={ref} 
-      className="scroll-mt-32" 
+      className="scroll-mt-32 lg:scroll-mt-[15rem]" 
       id="about">
       <div className="
         mx-4 
@@ -90,7 +90,7 @@ export default function About() {
               ">
                 Currently a...
               </h3>
-              <li>Bachelor of Science Student @ UBC</li>
+              <li>BSc Computer Science Student @ UBC</li>
               <li>Developer @ Develop for Good 2024</li>
               <li>Engagement Coordinator @ nwPlus</li>
               <li>Tutor @ The C.O.D.E Intiative</li>
@@ -115,11 +115,11 @@ export default function About() {
                 text-transparent 
                 h-[40px] 
                 font-bold">
-                My interests span ...
+                My interests span...
               </h3>
               <li>Machine Learning</li>
               <li>Data Analytics</li>
-              <li>UX Research</li>
+              <li>Web Development</li>
               <li>Planning Events</li>
             </motion.div>
 
@@ -142,11 +142,11 @@ export default function About() {
                 text-transparent 
                 h-[40px] 
                 font-bold">
-                I like ...
+                I also like...
               </h3>
-              <li>🏸 smacking birdies</li>
-              <li>🚶 walking insane distances</li>
-              <li>🥘 cooking up comforting meals</li>
+              <div>🏸 &nbsp; smacking birdies</div>
+              <div>🚶 &nbsp; walking insane distances</div>
+              <div>🥘 &nbsp; cooking up comforting meals</div>
             </motion.div>
           </div>
         </div>

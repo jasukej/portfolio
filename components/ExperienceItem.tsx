@@ -108,7 +108,7 @@ const ExperienceItem = ({
           text-lg"
             >
               {exp.title}
-              <span className="font-light">&nbsp; @ {exp.org}</span>
+              <span className="font-light">&nbsp;@ {exp.org}</span>
             </h3>
             <div
               className="

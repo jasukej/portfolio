@@ -35,6 +35,9 @@ export default function ProjectCard({
         border-[2px]
         border-grey-800 
         mb-3
+        hover:shadow-md
+        transition-shadow
+        duration-200
         min-h-[5rem]
         max-w-[25rem]
         rounded-lg 
@@ -135,6 +138,7 @@ export default function ProjectCard({
           className="
             mt-2 
             text-sm
+            font-light
             text-neutral-900
             ">
             {description}
@@ -145,8 +149,8 @@ export default function ProjectCard({
             flex-row
             overflow-x-scroll
             max-w-full
-            gap-x-3
-            mt-2
+            gap-x-2
+            mt-3
           ">
             {tags.map((tech:string, index:any) => {
               return (

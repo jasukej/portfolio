@@ -35,6 +35,23 @@ export default function Intro() {
         gap-y-8 
         sm:px-6 
         px-12">
+          {/*image*/}
+        <div className="
+          block
+          lg:hidden 
+          my-4
+          max-w-[320px] 
+          lg:max-w-[420px] 
+          overflow-hidden 
+          animate-profile-animate">
+          <Image
+            src="/kezrijadi.jpg"
+            alt="Kez Rijadi"
+            className="w-full h-full object-cover"
+            width={320}
+            height={298.93}
+          />
+        </div>
         <div className="
           flex 
           flex-col 
@@ -92,8 +109,6 @@ export default function Intro() {
                   " develop",
                   2000,
                   " design",
-                  2000,
-                  " cook",
                   2000,
                 ]}
                 speed={50}
@@ -199,6 +214,7 @@ export default function Intro() {
         </div>
         {/*image*/}
         <div className="
+          hidden
           lg:flex 
           lg:flex-1 
           max-w-[320px] 
@@ -209,9 +225,8 @@ export default function Intro() {
             src="/kezrijadi.jpg"
             alt="Kez Rijadi"
             className="w-full h-full object-cover"
-            width={320}
-            height={298.93}
-            layout="responsive"
+            width={270}
+            height={250}
           />
         </div>
       </div>

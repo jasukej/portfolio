@@ -79,6 +79,7 @@ export default function Projects() {
         </div>
         <div className="
           flex-col 
+          gap-y-1
           flex
           xl:flex-wrap
           xl:gap-x-4

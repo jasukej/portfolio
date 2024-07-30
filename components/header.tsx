@@ -82,18 +82,25 @@ export default function Header() {
 
         {/* Hamburger */}
         <button
-          className="
+          className={`
             z-10 
             fixed 
             right-0 
             top-7 
-            px-4 
+            rounded-full
+            ${ isNavOpen ? "bg-transparent" :
+              showBackground
+                ? "rounded-full border hover:shadow-lg transition-shadow border-white border-opacity-40 bg-white bg-opacity-80 sm:bg-opacity-100 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] "
+                : "bg-transparent"
+            }
+            p-2
+            mx-4 
             sm:px-6 
-            sm:hidden"
+            transform
+            duration-100
+            sm:hidden`}
           onClick={() => {
-            console.log("Before clicking:", isNavOpen);
             setIsNavOpen(!isNavOpen);
-            console.log("After clicking:", !isNavOpen);
           }}
         >
           {isNavOpen ? (
@@ -106,15 +113,17 @@ export default function Header() {
         {/* Collapsible Menu */}
         {isNavOpen && (
           <nav
-            className="
+            className={`
             flex 
             fixed 
-            top-[4.5rem] 
+            top-0
+            pt-7
+            pb-2
             left-0 
-            w-full 
+            w-full  
             bg-white
             sm:hidden 
-            shadow-md"
+            shadow-md`}
           >
             <ul
               className="
@@ -132,12 +141,13 @@ export default function Header() {
                   text-center"
                 >
                   <Link
-                    className="
+                    className={`
                       block 
                       py-3 
                       px-3 
+                      ${activeSection == link.name && 'underline underline-offset-2'}
                       hover:text-gray-950 
-                      transition"
+                      transition`}
                     href={link.hash}
                   >
                     {link.name}

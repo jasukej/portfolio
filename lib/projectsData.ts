@@ -1,9 +1,21 @@
 import injurney from "@/public/injurney.png";
 import readbuddy from "@/public/ReadBuddy.png";
 import boltbootcamp from "@/public/bolt-casecomp/1.png";
-import study_spotter from "@/public/study-spotter/2.png";
+import jalankami from "@/public/jalankami/1.jpg";
+import study_spotter from "@/public/study-spotter/4.png";
 
 export const projectsData = [
+  {
+    title: "🏆 JalanKami",
+    description:
+      "A community-driven web app to improve pedestrian accessibility by automating manual sidewalk surveys.",
+    tags: ["React", "TypeScript", "Pytorch", "Tailwind", "Flask", "Firebase", "OpenAI API"],
+    imageUrl: jalankami,
+    category: "Hackathon",
+    github: 'https://github.com/jasukej/garudahacks',
+    external: 'https://devpost.com/software/jalankami',
+    detailed: false,
+  },
     {
       title: 'Study Spotter',
       description: 
@@ -13,10 +25,10 @@ export const projectsData = [
       category: "Personal Project",
       github: 'https://github.com/jasukej/study-spotter',
       external: 'https://studyspotter.vercel.app/',
-      detailed: true,
+      detailed: false,
     },
     {
-      title: "BOLT Bootcamp 2024",
+      title: "🏆 BOLT Bootcamp 2024",
       description:
         "Utilising data-driven insights and predictive ML models to create a cohesive, business-oriented solution to credit card fraud.",
       tags: ["Python", "Machine Learning", "Tensorflow", "Data Analytics", "Marketing"],

@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Kez | Portfolio",
+  title: "Kez's Portfolio",
   description: "My portfolio :')",
 };
 
@@ -26,7 +26,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" /> 
       </Head>
       <body
-        className={"${inter.className} bg-gray-50 text-gray-950 pt-18 sm:36"}
+        className={"${inter.className} bg-gray-50 text-gray-950 pt-8 sm:pt-18"}
       >
         <div className="
         bg-[#fbe2b3] 
@@ -42,6 +42,8 @@ export default function RootLayout({
         sm:w-[68.75rem]"></div>
 
         <div className="
+          hidden
+          lg:block
           bg-[#dbd7fb] 
           opacity-60 
           absolute 
