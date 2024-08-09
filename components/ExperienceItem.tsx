@@ -22,7 +22,7 @@ const ExperienceItem = ({
         tag,
         location,
         description,
-        icon: Icon,
+        icon,
         date,
       } = exp;
 
@@ -58,17 +58,16 @@ const ExperienceItem = ({
           <div
             className="
           bg-white 
-          border-2 
+          border-4
           border-gray-200 
-          rounded-full 
-          p-3 
+          rounded-full
           absolute 
           left-0
           top-10
           transform 
           -translate-y-1/2"
           >
-            <Icon size={26} />
+            <img src={`experiences-logo/${icon}`} width={45} height={45} style={{objectFit: "fill", borderRadius: "50%"}} />
           </div>
           <div
             className="

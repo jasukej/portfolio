@@ -28,7 +28,7 @@ export const projectsData = [
       detailed: false,
     },
     {
-      title: "🏆 BOLT Bootcamp 2024",
+      title: "🏆 SPArk Business Plan",
       description:
         "Utilising data-driven insights and predictive ML models to create a cohesive, business-oriented solution to credit card fraud.",
       tags: ["Python", "Machine Learning", "Tensorflow", "Data Analytics", "Marketing"],
