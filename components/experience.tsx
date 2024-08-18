@@ -34,7 +34,7 @@ const CustomTimeline = () => {
         flex-col"
         >
           <div className="text-2xl font-mono font-semibold mb-4">
-            what I've been up to
+            what I&apos;ve been up to
           </div>
           <div
             className="

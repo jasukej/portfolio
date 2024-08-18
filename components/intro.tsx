@@ -158,7 +158,7 @@ export default function Intro() {
                 text-transparent">
                   software solutions
                 </span> for a sustainable and accessible future.
-              I'm excited about bringing impactful ideas to life, whether by developing useful applications or fostering opportunities for fellow students.
+              I&apos;m excited about bringing impactful ideas to life, whether it&apos;s developing useful applications or fostering opportunities for fellow students.
             </motion.p>
             <div className="
               flex

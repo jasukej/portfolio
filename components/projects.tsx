@@ -34,7 +34,7 @@ export default function Projects() {
         xl:w-[60rem]">
         <div className="flex flex-col items-center gap-y-4">
         <div className="text-2xl flex font-mono justify-center font-semibold">
-          my box of stuff
+          things I've built
         </div>
         {/* Filtering bar */}
         <div 
