@@ -8,7 +8,7 @@ export const experiencesData = [
     {
       title: "VP Web Development",
       org: "INFISA Santa Laurensia",
-      tag: "clubs",
+      tag: "club",
       location: "Jakarta, Indonesia",
       description: 
       "Developed a dynamic website using Editor X, JavaScript and jQuery, enhancing user interaction and creating a responsive layout. Led a team of 12 volunteers that executed design, coding, and content updates.",

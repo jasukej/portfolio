@@ -3,13 +3,24 @@ import Image from "next/image";
 import { projectsData } from "@/lib/projectsData";
 import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
+import { animated, to as interpolate } from '@react-spring/web';
 import { useRouter } from "next/navigation";
 import { FaExternalLinkSquareAlt, FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import Badge from "./Badge";
 import Link from "next/link";
+import { StaticImageData } from 'next/image';
 
-type ProjectProps = (typeof projectsData)[number];
+type ProjectProps = {
+  title: string;
+  description: string;
+  tags: readonly string[];
+  imageUrl: string | StaticImageData;
+  github: string;
+  external: string;
+  detailed?: boolean;
+  winDesc?: string;
+};
 
 export default function ProjectCard({
   title,
@@ -18,7 +29,8 @@ export default function ProjectCard({
   imageUrl,
   github,
   external,
-  detailed
+  detailed,
+  winDesc
 }: ProjectProps) {
   const router = useRouter();
   const [isHovered, setIsHovered] = useState(false);
@@ -45,7 +57,7 @@ export default function ProjectCard({
         last:mb-0"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      >
+    >
       <div
         className="
         flex
@@ -54,6 +66,7 @@ export default function ProjectCard({
         border-gray-800
         ">
         <div 
+        onClick={handleCardClick}
         className="
           max-h-[18rem]
           overflow-hidden
@@ -89,7 +102,7 @@ export default function ProjectCard({
           ></div>
         </div>
         <div
-        className="">
+        className="mt-1">
           <div 
           className="
             flex-row
@@ -99,7 +112,21 @@ export default function ProjectCard({
             <div 
             className="
               text-xl 
+              cursor-pointer
               font-semibold">
+              {winDesc && (
+                <span className="relative">
+                  <span
+                    className="inline-block transition-transform duration-200 ease-in-out peer hover:rotate-12"
+                    style={{ display: "inline-block", transformOrigin: "center" }}
+                  >
+                    🏆&nbsp;
+                  </span>
+                  <span className="absolute left-0 bottom-full mb-2 hidden w-max ml-[-4px] px-2 py-1 text-sm font-medium text-gray-500 border-[2px] shadow-md bg-white rounded peer-hover:block">
+                    {winDesc}
+                  </span>
+                </span>
+              )}
               {title}
             </div>
             <div
@@ -120,6 +147,7 @@ export default function ProjectCard({
                 <FaGithub 
                   size={24}
                   onClick={(e) => e.stopPropagation()}
+                  className="hover:scale-110 transition transform duration-200 hover:text-sky-800"
                 />
               </Link>
               <Link
@@ -130,6 +158,7 @@ export default function ProjectCard({
                 <FiExternalLink 
                   size={24}
                   onClick={(e) => e.stopPropagation()}
+                  className="hover:scale-110 transition transform duration-200 hover:text-sky-800"
                 />
               </Link>
             </div>
@@ -140,6 +169,7 @@ export default function ProjectCard({
             text-sm
             font-light
             text-neutral-900
+            cursor-default
             ">
             {description}
           </div>

@@ -33,7 +33,9 @@ const CustomTimeline = () => {
         flex 
         flex-col"
         >
-          <SectionHeading>experience</SectionHeading>
+          <div className="text-2xl font-mono font-semibold mb-4">
+            what I've been up to
+          </div>
           <div
             className="
           absolute 

@@ -1,16 +1,17 @@
 import "./globals.css";
 import Header from "@/components/header";
 import ActiveSectionContextProvider from "@/context/active-section-context";
-import { Inter } from "next/font/google";
+import { Inter, Syne } from "next/font/google";
 import { Outfit } from "next/font/google";
 import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 const outfit = Outfit({ subsets: ["latin"] });
+const syne = Syne({ subsets: ["latin"], weight: ['400', '700'] });
 
 export const metadata = {
   title: "Kez's Portfolio",
-  description: "My portfolio :')",
+  description: "My corner of the web 🦦",
 };
 
 export default function RootLayout({
@@ -26,7 +27,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" /> 
       </Head>
       <body
-        className={"${inter.className} bg-gray-50 text-gray-950 pt-8 sm:pt-18"}
+        className={`${inter.className} bg-gray-50 text-gray-950 pt-8 sm:pt-18`}
       >
         <div className="
         bg-[#fbe2b3] 

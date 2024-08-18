@@ -14,7 +14,7 @@ export default function Footer() {
         gap-y-2
         w-full 
         justify-center 
-        mb-4">
+        mb-6">
           👋 Thanks for visiting! <span className="hidden md:block">&nbsp;|&nbsp;</span>
         <Link
           href="mailto:keziarijadi25@gmail.com"

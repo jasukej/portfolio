@@ -36,7 +36,7 @@ export default function About() {
           gap-y-8">
           <div className="
             flex 
-            flex-col 
+            flex-col
             min-w-[15rem] 
             min-h-[15rem]">
             {activeSection === "About" && (
@@ -90,10 +90,10 @@ export default function About() {
               ">
                 Currently a...
               </h3>
-              <li>BSc Computer Science Student @ UBC</li>
-              <li>Developer @ Develop for Good 2024</li>
+              <li>BSc. Computer Science Student @ UBC</li>
               <li>Engagement Coordinator @ nwPlus</li>
-              <li>Tutor @ The C.O.D.E Intiative</li>
+              <li>Developer @ Develop for Good 2024</li>
+              <li>SWE Intern @ Kawan Lama Group</li>
             </motion.div>
 
             <motion.div
@@ -115,7 +115,7 @@ export default function About() {
                 text-transparent 
                 h-[40px] 
                 font-bold">
-                My interests span...
+                Talk to me about...
               </h3>
               <li>Machine Learning</li>
               <li>Data Analytics</li>

@@ -11,6 +11,7 @@ export default function SectionHeading({ children }: SectionHeadingProps) {
     font-medium 
     flex
     w-full
+    font-syne
     mb-8 
     text-center">
     {children}

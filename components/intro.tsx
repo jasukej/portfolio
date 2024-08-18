@@ -7,8 +7,6 @@ import { TypeAnimation } from "react-type-animation";
 import { fadeIn } from "../variants";
 
 import { useSectionInView } from "@/lib/hooks";
-
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { TfiDownload } from "react-icons/tfi";
 import SocialBar from "./socialbar";
 
@@ -70,7 +68,7 @@ export default function Intro() {
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
               className="
-                text-6xl 
+                text-6xl
                 lg:text-7xl 
                 font-bold py-4"
             >
@@ -89,6 +87,7 @@ export default function Intro() {
                 flex-col
                 items-center
                 justify-center
+                font-light
                 md:flex-row
                 md:justify-start
                 md:items-end
@@ -101,12 +100,15 @@ export default function Intro() {
                 md:my-4
                 text-5xl 
                 lg:text-6xl
+                text-nowrap
                 ">
-                  I like to&nbsp;
+                  I love to&nbsp;
               </span>
               <TypeAnimation
                 sequence={[
                   " develop",
+                  2000,
+                  " ideate",
                   2000,
                   " design",
                   2000,
@@ -145,44 +147,37 @@ export default function Intro() {
                 md:px-6 
                 lg:px-0"
             >
-              Student at the University of British Columbia passionate about
-              creating sustainable and accessible software solutions using{" "}
-              <span className="
+              Incoming sophomore at the University of British Columbia
+              developing <span className="
                 bold 
                 bg-gradient-to-r 
-                from-cyan-500 
-                to-blue-500 
+                from-cyan-600 
+                to-blue-600 
                 bg-clip-text 
                 inline-block 
                 text-transparent">
-                AI
-              </span>{" "}
-              and{" "}
-              <span className="
-                bold 
-                bg-gradient-to-r 
-                from-cyan-500 
-                to-blue-500 
-                bg-clip-text 
-                inline-block 
-                text-transparent">
-                data analytics.
-              </span>{" "}
-              I&apos;m always experimenting, whether it&apos;s developing new
-              projects or cooking up delicious meals.
+                  software
+                </span> for a sustainable and accessible future.
+              I'm dedicated to bringing impactful ideas to life, whether by creating useful applications or fostering opportunities for fellow students.
             </motion.p>
             <div className="
+              flex
+              flex-col
+              xl:justify-between
+              xl:max-w-[75%]
+              xl:flex-row
+              xl:items-center
               gap-y-8 
               mb-12">
               <div className="
                 flex 
                 max-w-max 
                 gap-x-6 
-                items-center 
+                items-center
                 lg:mx-0 
                 mx-auto">
                 <a
-                  href="https://drive.google.com/file/d/1hl4UF9lg-gOkF9caRICqTaO_I1q0ry5p/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1l0NXVSVCMEhrJktTbgIQPwep_ACBrDQI/view?usp=sharing"
                   target="_blank"
                 >
                   <button className="
@@ -198,6 +193,7 @@ export default function Intro() {
                     px-4 
                     rounded-full 
                     mb-4
+                    xl:mb-0
                     align-items
                     flex 
                     flex-row 

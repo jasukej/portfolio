@@ -5,9 +5,9 @@ import { projectsData } from "@/lib/projectsData";
 import SectionHeading from "./section-heading";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import ProjectCard from "./project";
+import ProjectCard from "./ProjectCard";
 
-const projectTypes = ["All", "Hackathon", "Personal Project", "Case Comp"];
+const projectTypes = ["All", "Hackathon", "Personal Project", "Data Science"];
 
 export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.75);
@@ -32,56 +32,55 @@ export default function Projects() {
         justify-center
         max-w-[40rem]
         xl:w-[60rem]">
-      <div className="
-          flex
-          md:flex-row
-          flex-col
-          justify-between
-        ">
-      <SectionHeading>projects</SectionHeading>
-      {/* Filtering bar */}
-      <div 
-      className="
-        flex 
-        justify-end 
-        min-w-[75%]
-        mb-4">
-          {projectTypes.map((category) => (
-            <button
-              key={category}
-              className={`
-                px-2 
-                py-2
-                mx-2
-                md:max-h-[2rem]
-                h-auto
-                text-xs 
-                transition
-                duration-100
-                relative
-                text-nowrap
-                hover:opacity-60
-                ${selectedCategory === category ? "border-b-2 border-blue-500" : "text-gray-700 border-none"}
-              `}
-              onClick={() => setSelectedCategory(category)}
-            >
-              <span className={`
-              ${
-                selectedCategory === category
-                  ? "bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text underline-offset-4 underline text-transparent"
-                  : "text-gray-700 border-none"
-              }`}>
-                {category}
-              </span>
-            </button>
-          ))}
+        <div className="flex flex-col items-center gap-y-4">
+        <div className="text-2xl flex font-mono justify-center font-semibold">
+          my box of stuff
         </div>
+        {/* Filtering bar */}
+        <div 
+        className="
+          rounded-full
+          px-4
+          border-black
+          border-[1px]
+          flex
+          max-w-fit
+          mb-4">
+            {projectTypes.map((category) => (
+              <button
+                key={category}
+                className={`
+                  px-2 
+                  py-2
+                  mx-2
+                  md:max-h-[2rem]
+                  h-auto
+                  text-xs 
+                  transition
+                  duration-100
+                  text-nowrap
+                  hover:opacity-60
+                  ${selectedCategory === category ? "border-b-2 border-blue-500" : "text-gray-700 border-none"}
+                `}
+                onClick={() => setSelectedCategory(category)}
+              >
+                <span className={`
+                ${
+                  selectedCategory === category
+                    ? "bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text underline-offset-4 underline text-transparent"
+                    : "text-gray-700 border-none"
+                }`}>
+                  {category}
+                </span>
+              </button>
+            ))}
+          </div>
         </div>
         <div className="
           flex-col 
           gap-y-1
           flex
-          xl:flex-wrap
+          flex-wrap
           xl:gap-x-4
           items-center 
           justify-center">

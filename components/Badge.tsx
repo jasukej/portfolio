@@ -11,8 +11,10 @@ const Badge = ({ title }:BadgeProps) => {
         px-2
         py-1
         text-xs
-        text-white
-        bg-gray-800
+        text-sky-700
+        bg-white
+        border-sky-700
+        border-[1px]
         rounded-full
         uppercase
         flex
