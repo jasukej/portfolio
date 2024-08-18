@@ -148,7 +148,7 @@ export default function Intro() {
                 lg:px-0"
             >
               Incoming sophomore at the University of British Columbia
-              developing <span className="
+              building <span className="
                 bold 
                 bg-gradient-to-r 
                 from-cyan-600 
@@ -156,9 +156,9 @@ export default function Intro() {
                 bg-clip-text 
                 inline-block 
                 text-transparent">
-                  software
+                  software solutions
                 </span> for a sustainable and accessible future.
-              I'm dedicated to bringing impactful ideas to life, whether by creating useful applications or fostering opportunities for fellow students.
+              I'm excited about bringing impactful ideas to life, whether by developing useful applications or fostering opportunities for fellow students.
             </motion.p>
             <div className="
               flex
