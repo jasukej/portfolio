@@ -79,7 +79,6 @@ export default function Header() {
             /> */}
           </a>
         </div>
-
         {/* Hamburger */}
         <button
           className={`
@@ -111,52 +110,54 @@ export default function Header() {
         </button>
 
         {/* Collapsible Menu */}
-        {isNavOpen && (
-          <nav
-            className={`
+        <nav
+          className={`
+          flex 
+          fixed 
+          top-0
+          left-0 
+          w-full  
+          bg-white
+          sm:hidden 
+          shadow-md
+          transition-all
+          duration-300
+          ease-in-out
+          ${isNavOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}
+          overflow-hidden`}
+        >
+          <ul
+            className="
             flex 
-            fixed 
-            top-0
-            pt-7
-            pb-2
-            left-0 
-            w-full  
-            bg-white
-            sm:hidden 
-            shadow-md`}
+            flex-col 
+            items-center 
+            w-full 
+            py-2"
           >
-            <ul
-              className="
-              flex 
-              flex-col 
-              items-center 
-              w-full 
-              pb-2"
-            >
-              {links.map((link) => (
-                <li
-                  key={link.hash}
-                  className="
-                  w-full 
-                  text-center"
+            {links.map((link) => (
+              <li
+                key={link.hash}
+                className="
+                w-full 
+                text-center"
+              >
+                <Link
+                  className={`
+                    block 
+                    py-3 
+                    px-3 
+                    ${activeSection == link.name && 'underline underline-offset-2'}
+                    hover:text-gray-950 
+                    transition`}
+                  href={link.hash}
+                  onClick={() => setIsNavOpen(false)}
                 >
-                  <Link
-                    className={`
-                      block 
-                      py-3 
-                      px-3 
-                      ${activeSection == link.name && 'underline underline-offset-2'}
-                      hover:text-gray-950 
-                      transition`}
-                    href={link.hash}
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        )}
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
         {/* Main Navigation */}
         <div>
@@ -168,6 +169,8 @@ export default function Header() {
               transform 
               -translate-x-1/2 
               h-[4.5rem] 
+              hidden
+              md:block
               w-auto 
               sm:top-6 
               sm:h-[3.25rem] 
