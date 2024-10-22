@@ -1,12 +1,24 @@
 import injurney from "@/public/injurney.png";
 import readbuddy from "@/public/ReadBuddy.png";
 import boltbootcamp from "@/public/bolt-casecomp/1.png";
+import skog from "@/public/skog/1.png";
 import jalankami from "@/public/jalankami/1.png";
 import study_spotter from "@/public/study-spotter/4.png";
 import widscasecomp from "@/public/wids-casecomp/1.png";
 import datafest2024 from "@/public/datafest/1.png";
 
 export const projectsData = [
+  {
+    title: "skog",
+    description:
+      "A web application automating panic attack first aid and anxiety trigger detection using conversational voice AI.",
+    tags: ["NextJS", "TypeScript", "Hume EVI", "Google Cloud", "VAPI", "Firebase", "OpenAI API", "Cartesia"],
+    imageUrl: skog,
+    category: "Hackathon",
+    github: 'https://github.com/jasukej/calhacks',
+    external: 'https://devpost.com/software/skog',
+    detailed: false,
+  },
   {
     title: "JalanKami",
     description:

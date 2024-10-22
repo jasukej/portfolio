@@ -107,7 +107,10 @@ const ExperienceItem = ({
           text-lg"
             >
               {exp.title}
-              <span className="font-light">&nbsp;@ {exp.org}</span>
+              <span className="font-light text-black"> @ <a href={exp.link} target="_blank" className="relative group transition-colors duration-300 hover:text-blue-500">
+                {exp.org}
+                <span className="absolute left-0 bottom-0 w-0 h-[1.5px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+              </a></span>
             </h3>
             <div
               className="

@@ -88,6 +88,9 @@ export default function Intro() {
                 items-center
                 justify-center
                 font-light
+                text-3xl
+                lg:text-4xl
+                font-mono
                 md:flex-row
                 md:justify-start
                 md:items-end
@@ -98,11 +101,9 @@ export default function Intro() {
                 mt-4
                 mb-2 
                 md:my-4
-                text-5xl 
-                lg:text-6xl
                 text-nowrap
                 ">
-                  I love to&nbsp;
+                  I like to&nbsp;
               </span>
               <TypeAnimation
                 sequence={[
@@ -118,16 +119,13 @@ export default function Intro() {
                   bg-gradient-to-r 
                   from-cyan-500
                   to-blue-500 
-                  bold 
-                  text-5xl 
-                  lg:text-6xl 
+                  bold
                   bg-clip-text 
                   block
                   md:inline-block
-                  md:mb-[6px] 
                   text-transparent 
-                  h-[60px]
-                  lg:h-[70px] 
+                  h-[50px]
+                  lg:h-[55px] 
                   lg:min-w-[345px]"
                 wrapper="span"
                 repeat={Infinity}
@@ -147,7 +145,7 @@ export default function Intro() {
                 md:px-6 
                 lg:px-0"
             >
-              Incoming sophomore at the University of British Columbia
+              Sophomore at the University of British Columbia
               building <span className="
                 bold 
                 bg-gradient-to-r 
@@ -157,7 +155,7 @@ export default function Intro() {
                 inline-block 
                 text-transparent">
                   software solutions
-                </span> for a sustainable and accessible future.
+                </span> for a more sustainable and accessible future.
               I&apos;m excited about bringing impactful ideas to life, whether it&apos;s developing useful applications or fostering opportunities for fellow students.
             </motion.p>
             <div className="

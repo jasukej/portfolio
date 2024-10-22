@@ -90,10 +90,10 @@ export default function About() {
               ">
                 Currently a...
               </h3>
-              <li>BSc. Computer Science Student @ UBC</li>
-              <li>Engagement Coordinator @ nwPlus</li>
-              <li>Developer @ Develop for Good 2024</li>
-              <li>SWE Intern @ Kawan Lama Group</li>
+              <li>BSc. Computer Science Student <span className="text-gray-500 font-light">@ UBC</span></li>
+              <li>Engagement Coordinator <span className="text-gray-500 font-light">@ nwPlus</span></li>
+              <li>SWE Intern <span className="text-gray-500 font-light">@ Kawan Lama Group</span></li>
+              <li>CS TA + Support Analyst <span className="text-gray-500 font-light">@ UBC</span></li>
             </motion.div>
 
             <motion.div
@@ -120,7 +120,7 @@ export default function About() {
               <li>Machine Learning</li>
               <li>Data Analytics</li>
               <li>Web Development</li>
-              <li>Planning Events</li>
+              <li>Community Engagement</li>
             </motion.div>
 
             <motion.div
