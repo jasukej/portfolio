@@ -60,13 +60,13 @@ export default function Projects() {
                     transition
                     duration-300
                     text-nowrap
-                    hover:opacity-60
+                    ${selectedCategory === category ? 'hover:opacity-100' : 'hover:opacity-60'}
                     relative
                   `}
                   onClick={() => setSelectedCategory(category)}
                 >
                   <span className={`
-                  transition-colors duration-300
+                  transition duration-300
                   ${
                     selectedCategory === category
                       ? "bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent"
