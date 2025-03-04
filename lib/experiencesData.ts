@@ -1,10 +1,15 @@
-import { MdOutlineComputer, MdDesignServices } from "react-icons/md";
-import { BsEnvelopeHeart } from "react-icons/bs";
-import { ImStatsDots } from "react-icons/im";
-import { LuTriangle } from "react-icons/lu";
-import { AiFillSmile } from "react-icons/ai";
-
 export const experiencesData = [
+    {
+      title: "STEP Intern",
+      org: "Google",
+      link: "https://buildyourfuture.withgoogle.com/",
+      tag: "internship",
+      location: "Kitchener, ON",
+      description: 
+      "Incoming STEP software engineer intern on the GCP Healthacre team.",
+      icon: 'google.webp',
+      date: "May 2025 - Aug 2025",
+    },
     {
       title: "Software Engineer Intern",
       org: "Kawan Lama Group",
@@ -14,7 +19,7 @@ export const experiencesData = [
       description: 
       "Building an internal incident management system to manage the company's IT workflow, saving 8 hours of manual incident reporting per week.",
       icon: 'klg-tech.png',
-      date: "Sep 2024 - Present",
+      date: "Sep 2024 - Dec 2024",
     },
     {
       title: "Applied AI Engineer",
@@ -25,7 +30,7 @@ export const experiencesData = [
       description: 
       "Building scalable system architecture using CUDA and ROS2 to support Agrobot's object detection capabilities. Agrobot is an autonomous farming robot that uses AI to detect and exterminate weeds in real-time.",
       icon: 'agrobot.jpeg',
-      date: "Oct 2024 - Present",
+      date: "Oct 2024 - Dec 2024",
     },
     {
       title: "Web Developer",
@@ -47,7 +52,7 @@ export const experiencesData = [
       description: 
       "Teaching assistant for UBC's CPSC 210 - Software Construction course. Reinforcing Java and OOP concepts through weekly office hours and facilitating labs for 80+ students.",
       icon: 'UBC.png',
-      date: "Sep 2024 - Present",
+      date: "Sep 2024 - Dec 2024",
     },
     {
       title: "Support Analyst",
@@ -93,24 +98,24 @@ export const experiencesData = [
       icon: 'DFG.png',
       date: "May 2024 - Sep 2024",
     }, 
-    {
-      title: "B2C (Marketing) Portfolio Member",
-      org: "AIESEC in UBC", 
-      tag: "club", 
-      location: "Vancouver, BC", 
-      description: 
-      "Conducted class shouts and boothings to promote AIESEC’s exchange opportunities. Designed compelling newsletters and promotional materials, ensuring consistent branding across digital platforms.",
-      icon: "AIESEC.jpg",
-      date: "Jan 2024 - Sep 2024",
-    }, 
-    {
-      title: "VP Web Development",
-      org: "INFISA Santa Laurensia",
-      tag: "club",
-      location: "Jakarta, Indonesia",
-      description: 
-      "Developed a dynamic website using Editor X, JavaScript and jQuery, enhancing user interaction and creating a responsive layout. Led a team of 12 volunteers that executed design, coding, and content updates.",
-      icon: "INFISA.png",
-      date: "Oct 2021 - Jan 2023",
-    }, 
+    // {
+    //   title: "B2C (Marketing) Portfolio Member",
+    //   org: "AIESEC in UBC", 
+    //   tag: "club", 
+    //   location: "Vancouver, BC", 
+    //   description: 
+    //   "Conducted class shouts and boothings to promote AIESEC’s exchange opportunities. Designed compelling newsletters and promotional materials, ensuring consistent branding across digital platforms.",
+    //   icon: "AIESEC.jpg",
+    //   date: "Jan 2024 - Sep 2024",
+    // }, 
+    // {
+    //   title: "VP Web Development",
+    //   org: "INFISA Santa Laurensia",
+    //   tag: "club",
+    //   location: "Jakarta, Indonesia",
+    //   description: 
+    //   "Developed a dynamic website using Editor X, JavaScript and jQuery, enhancing user interaction and creating a responsive layout. Led a team of 12 volunteers that executed design, coding, and content updates.",
+    //   icon: "INFISA.png",
+    //   date: "Oct 2021 - Jan 2023",
+    // }, 
   ] as const;

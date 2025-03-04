@@ -103,15 +103,13 @@ export default function Intro() {
                 md:my-4
                 text-nowrap
                 ">
-                  I like to&nbsp;
+                  I am a&nbsp;
               </span>
               <TypeAnimation
                 sequence={[
-                  " develop",
+                  " developer",
                   2000,
-                  " ideate",
-                  2000,
-                  " design",
+                  " designer",
                   2000,
                 ]}
                 speed={50}
@@ -197,7 +195,7 @@ export default function Intro() {
                     flex-row 
                     gap-x-2">
                       Resume 
-                      <TfiDownload className="mt-[5px] text-[14px]" />
+                      <TfiDownload className="mt-[5px] text-[14px] font-bold" />
                   </button>
                 </a>
               </div>

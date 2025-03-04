@@ -92,7 +92,7 @@ export default function About() {
               </h3>
               <li>BSc. Computer Science Student <span className="text-gray-500 font-light">@ UBC</span></li>
               <li>Engagement Coordinator <span className="text-gray-500 font-light">@ nwPlus</span></li>
-              <li>SWE Intern <span className="text-gray-500 font-light">@ Kawan Lama Group</span></li>
+              <li>Incoming STEP Intern <span className="text-gray-500 font-light">@ Google</span></li>
               <li>CS TA + Support Analyst <span className="text-gray-500 font-light">@ UBC</span></li>
             </motion.div>
 
@@ -117,10 +117,10 @@ export default function About() {
                 font-bold">
                 Talk to me about...
               </h3>
-              <li>Machine Learning</li>
-              <li>Data Analytics</li>
-              <li>Web Development</li>
-              <li>Community Engagement</li>
+              <li>Machine learning</li>
+              <li>Data analytics</li>
+              <li>Web design</li>
+              <li>Horror movies</li>
             </motion.div>
 
             <motion.div
