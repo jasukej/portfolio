@@ -90,10 +90,12 @@ export default function About() {
               ">
                 Currently a...
               </h3>
-              <li>BSc. Computer Science Student <span className="text-gray-500 font-light">@ UBC</span></li>
-              <li>Engagement Coordinator <span className="text-gray-500 font-light">@ nwPlus</span></li>
-              <li>Incoming STEP Intern <span className="text-gray-500 font-light">@ Google</span></li>
-              <li>CS TA + Support Analyst <span className="text-gray-500 font-light">@ UBC</span></li>
+              <div className="ml-4">
+                <li>BSc. Computer Science Student <span className="text-gray-500 font-light">@ UBC</span></li>
+                <li>Engagement Coordinator <span className="text-gray-500 font-light">@ nwPlus</span></li>
+                <li>STEP Intern <span className="text-gray-500 font-light">@ Google</span></li>
+                <li>Incoming SWE Intern<span className="text-gray-500 font-light">@ Tesla</span></li>
+              </div>
             </motion.div>
 
             <motion.div
@@ -117,10 +119,12 @@ export default function About() {
                 font-bold">
                 Talk to me about...
               </h3>
-              <li>Machine learning</li>
-              <li>Data analytics</li>
-              <li>Web design</li>
-              <li>Horror movies</li>
+              <div className="ml-4">
+                <li>Natural language processing</li>
+                <li>Web design</li>
+                <li>Horror movies</li>
+                <li>Anything else!</li>
+              </div>
             </motion.div>
 
             <motion.div

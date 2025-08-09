@@ -1,12 +1,23 @@
 export const experiencesData = [
     {
+      title: "Software Engineer Intern",
+      org: "Tesla",
+      link: "https://www.tesla.com/en_ca/supercharger",
+      tag: "internship",
+      location: "Palo Alto, CA",
+      description:
+      "Building distributed services in Scala and Akka to optimize uptime of a global charging network.",
+      icon: 'tesla.svg',
+      date: "Sept 2025 - Dec 2025",
+    },
+    {
       title: "STEP Intern",
       org: "Google",
       link: "https://buildyourfuture.withgoogle.com/",
       tag: "internship",
       location: "Kitchener, ON",
       description: 
-      "Incoming STEP software engineer intern on the GCP Healthacre team.",
+      "Developed front-end features in Angular and RxJS for GCP Healthcare's suite of products. Implemented resource creation and rollback interfaces to prevent data corruption in medical datastores.",
       icon: 'google.webp',
       date: "May 2025 - Aug 2025",
     },
@@ -17,41 +28,8 @@ export const experiencesData = [
       tag: "internship",
       location: "Jakarta, Indonesia",
       description: 
-      "Building an internal incident management system to manage the company's IT workflow, saving 8 hours of manual incident reporting per week.",
+      "Built an internal incident management system using Ruby on Rails to manage the company's IT workflow, saving 8 hours of manual incident reporting per week.",
       icon: 'klg-tech.png',
-      date: "Sep 2024 - Dec 2024",
-    },
-    {
-      title: "Applied AI Engineer",
-      org: "Agrobot",
-      link: "https://ubcagrobot.com/",
-      tag: "design team",
-      location: "Vancouver, BC",
-      description: 
-      "Building scalable system architecture using CUDA and ROS2 to support Agrobot's object detection capabilities. Agrobot is an autonomous farming robot that uses AI to detect and exterminate weeds in real-time.",
-      icon: 'agrobot.jpeg',
-      date: "Oct 2024 - Dec 2024",
-    },
-    {
-      title: "Web Developer",
-      org: "BOLT UBC",
-      link: "https://www.boltbootcamps.com/",
-      tag: "club",
-      location: "Vancouver, BC",
-      description: 
-      "Developing member-facing tools and automations for UBC's largest analytics club.",
-      icon: 'bolt-ubc.png',
-      date: "Oct 2024 - Present",
-    },
-    {
-      title: "Teaching Assistant",
-      org: "The University of British Columbia",
-      link: "https://www.cs.ubc.ca/",
-      tag: "part-time",
-      location: "Vancouver, BC",
-      description: 
-      "Teaching assistant for UBC's CPSC 210 - Software Construction course. Reinforcing Java and OOP concepts through weekly office hours and facilitating labs for 80+ students.",
-      icon: 'UBC.png',
       date: "Sep 2024 - Dec 2024",
     },
     {
@@ -66,37 +44,37 @@ export const experiencesData = [
       date: "Sep 2024 - Present",
     },
     {
-      title: "Events Director",
+      title: "Teaching Assistant",
+      org: "The University of British Columbia",
+      link: "https://www.cs.ubc.ca/",
+      tag: "part-time",
+      location: "Vancouver, BC",
+      description: 
+      "Teaching assistant for UBC's CPSC 210 - Software Construction course. Reinforcing Java and OOP concepts through weekly office hours and facilitating labs for 80+ students.",
+      icon: 'UBC.png',
+      date: "Sep 2024 - Dec 2024",
+    },
+    {
+      title: "VP Community",
       org: "UBC Product Management Club",
       link: "https://ubcpmc.com/",
       tag: "club",
       location: "Vancouver, BC",
       description: 
-      "Co-directing UBC's first PM conference to be held later this January.",
+      "Being really good at KBBQ. Also running UBC's first Product Fellowship. Previously Conference Director (2024-2025)",
       icon: 'ubcpmc.png',
       date: "May 2024 - Present",
     },
     {
-      title: "Engagement Coordinator",
+      title: "Developer",
       org: "nwPlus",
       link: "https://nwplus.io/",
       tag: "club",
       location: "Vancouver, BC",
       description: 
-      "Planning day-of hacker activities and engagement strategies for Western Canada's largest hackathons.",
+      "Developing software tools for 1000+ hackers and 50+ organizers to run Western Canada's largest hackathons. Previously Engagement Coordinator (2024-2025)",
       icon: 'nwPlus.png',
       date: "May 2024 - Present",
-    }, 
-    {
-      title: "Web Developer",
-      org: "Develop For Good",
-      link: "https://www.developforgood.com/",
-      tag: "volunteer",
-      location: "Remote",
-      description: 
-      "Creating a webapp to optimize 30+ internal user flows for the Swim England team, saving 4,000 hours of administration time annually. Implementing workflows for autopopulation and validation of customer-facing forms, and integrating existing OpenEngage database with this new system.",
-      icon: 'DFG.png',
-      date: "May 2024 - Sep 2024",
     }, 
     // {
     //   title: "B2C (Marketing) Portfolio Member",

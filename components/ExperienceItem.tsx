@@ -134,7 +134,7 @@ const ExperienceItem = ({
                       <FaLocationDot className="mr-2" />
                       {exp.location}
                     </div>
-                    <p className="text-gray-700">{exp.description}</p>
+                    <p className="text-gray-700 whitespace-pre-line">{exp.description}</p>
                   </>
                 )}
               </div>
